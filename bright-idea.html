@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>kjnorris1205 on GitHub</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>If you have a bright idea, turn the light on.</h1>
+
+    <div>
+        <p>
+            <button type="button" onclick="bigger()">Bigger</button>
+            <button type="button" onclick="smaller()">Smaller</button>
+        </p>
+        <img src="images/pic_bulboff.gif" id="myImage" width="100" height="180"/>
+        <p>
+        <button type="button" onclick="light(1)">Light On</button>
+        <button type="button" onclick="light(0)">Light Off</button>
+        </p>
+    </div>
+
+    <script>
+        function light(sw) {
+            var pic;
+            if (sw == 0)
+                pic = "images/pic_bulboff.gif";
+            else
+                pic = "images/pic_bulbon.gif";
+            document.getElementById("myImage").src = pic;
+        }
+
+        function bigger() {
+            var bulb = document.getElementById("myImage");
+            bulb.width *= 1.25;
+            bulb.height *= 1.25;
+        }
+
+        function smaller() {
+            var bulb = document.getElementById("myImage");
+            bulb.width /= 1.25;
+            bulb.height /= 1.25;
+        }
+    </script>
+</body>
+</html>

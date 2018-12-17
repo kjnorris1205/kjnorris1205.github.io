@@ -18,7 +18,7 @@
                 document.getElementById("result").innerHTML = "Worker support...";
                 if (typeof (w) == "undefined") {
                     document.getElementById("result").innerHTML = "about to create worker";
-                    w = new Worker("C:/GitHub/kjnorris1205/kjnorris1205.github.io/demo_workers.js");
+                    w = new Worker("demo_workers.js");
                     document.getElementById("result").innerHTML = "worker created";
                 }
                 w.onmessage = function(event) {

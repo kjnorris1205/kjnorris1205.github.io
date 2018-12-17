@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Count numbers: <output id="result">waiting...</output></p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    <script>
+        var w;
+
+        function startWorker() {
+            document.getElementById("result").innerHTML = "Starting worker...";
+            if (typeof(Worker) !== "undefined") {
+                document.getElementById("result").innerHTML = "Worker support...";
+                if (typeof (w) == "undefined") {
+                    document.getElementById("result").innerHTML = "about to create worker";
+                    w = new Worker("C:/GitHub/kjnorris1205/kjnorris1205.github.io/demo_workers.js");
+                    document.getElementById("result").innerHTML = "worker created";
+                }
+                w.onmessage = function(event) {
+                    document.getElementById("result").innerHTML = event.data;
+                };
+            } else {
+                document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
+            }
+        }
+
+        function stopWorker() {
+            w.terminate();
+            w = undefined;
+        }
+    </script>
+</body>
+</html>

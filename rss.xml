@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Janus | Wisdom fueling wonder</title>
+  <link>https://kjnorris1205.github.io</link>
+  <description>Janus is a digital garden where wisdom fuels wonder.</description>
+  <item>
+    <title>Hello World</title>
+    <link>https://kjnorris1205.github.io</link>
+    <description>My first entry into my digital garden.</description>
+  </item>
+</channel>
+</rss>

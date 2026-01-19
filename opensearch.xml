@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Janus</ShortName>
+  <Description>Search Janus Digital Garden</Description>
+  <Tags>garden wiki programming</Tags>
+  <Url type="text/html" template="https://kjnorris1205.github.io{searchTerms}"/>
+</OpenSearchDescription>

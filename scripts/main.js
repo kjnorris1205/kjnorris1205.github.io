@@ -9,22 +9,18 @@ myImage.addEventListener("click", () => {
    }
 });
 
-let myButton = document.querySelector("button");
-let myHeading = document.querySelector("h1");
+const myButton = document.querySelector("button");
+const myHeading = document.querySelector("h1");
 
 function setUserName() {
    const myName = prompt("Please enter your name.");
-   if (!myName) {
-      setUserName();
-   } else {
+   if (myName) {
       localStorage.setItem("name", myName);
       myHeading.textContent = `Welcome to Janus, ${myName}`;
    }
 }
 
-if (!localStorage.getItem("name")) {
-   setUserName();
-} else {
+if (localStorage.getItem("name")) {
    const storedName = localStorage.getItem("name");
    myHeading.textContent = `Welcome to Janus, ${storedName}`;
 }

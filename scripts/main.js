@@ -28,3 +28,12 @@ if (localStorage.getItem("name")) {
 myButton.addEventListener("click", () => {
    setUserName();
 });
+
+// WebGL info
+const webglInfo = document.querySelector(".webgl-info");
+if (webglInfo) {
+   const canvas = document.createElement('canvas');
+   const gl = canvas.getContext('webgl');
+   const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+   webglInfo.textContent=gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+}

@@ -54,3 +54,7 @@ img {
   margin: 0 auto;
   max-width: 100%;
 }
+
+pre {
+  font-size: 14px;
+}
